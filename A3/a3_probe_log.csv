@@ -1,0 +1,162 @@
+run,prompt,model,version,timestamp,output,verified,notes
+1,"I have 20 survey responses:
+
+Yes, yes, No, YES, No, yes, """", NO, Yes, no, YES, Yes, """", No, yes, No, YES, no, Yes, """"
+
+Calculate the count and percentage of Yes, No, and missing responses. Treat capitalization differences as the same answer and include missing responses in the denominator. Explain your method and show a summary table.",ChatGPT,GPT-6,2026-11-03 13:15,"Survey Response Summary
+
+Out of 20 survey responses, capitalization differences were ignored, and empty strings ("""") were classified as missing responses.
+
+Response | Count | Percentage
+Yes      | 10    | 50%
+No       | 7     | 35%
+Missing  | 3     | 15%
+Total    | 20    | 100%
+
+Distribution of all 20 survey responses, including missing values.
+Missing
+No
+Yes
+Yes: 10
+No: 7
+Missing: 3
+
+Method
+
+Normalize capitalization: Convert all nonempty responses to lowercase so Yes, yes, and YES are counted together.
+
+Identify missing values: Treat each empty string ("""") as a missing response.
+
+Count responses: Count the occurrences of Yes, No, and missing.
+
+Calculate percentages: Divide each category's count by the total number of responses (20), including missing values.
+
+The formula used is:
+Percentage = Category Count / 20 × 100
+
+For example:
+Yes = 10 / 20 × 100 = 50%
+
+Conclusion: Half of all respondents answered Yes (50%), 35% answered No, and 15% provided no response. Missing responses were included in the denominator to ensure the percentages represent the entire dataset.",correct,Correct counts and percentages; included a chart.
+2,"I have 20 survey responses:
+
+Yes, yes, No, YES, No, yes, """", NO, Yes, no, YES, Yes, """", No, yes, No, YES, no, Yes, """"
+
+Calculate the count and percentage of Yes, No, and missing responses. Treat capitalization differences as the same answer and include missing responses in the denominator. Explain your method and show a summary table.",ChatGPT,GPT-6,2026-11-03 13:15,"## Survey Response Summary
+
+A total of 20 survey responses were analyzed. Capitalization differences were ignored, and empty responses (`""""`) were classified as missing.
+
+| Response | Count | Percentage |
+|----------|-------|------------|
+| Yes | 10 | 50% |
+| No | 7 | 35% |
+| Missing | 3 | 15% |
+| Total | 20 | 100% |
+
+Distribution of Survey Responses
+
+Missing
+No
+Yes
+
+## Method
+
+1. Standardize capitalization: Convert all responses to lowercase so that `Yes`, `yes`, and `YES` are counted together. Apply the same rule to `No`.
+2. Identify missing responses: Treat each empty string (`""""`) as a missing response.
+3. Count responses: There are 10 Yes responses, 7 No responses, and 3 missing responses.
+4. Calculate percentages: Divide each category's count by the total number of responses (20), including missing responses.
+
+The formula used is:
+
+\[
+\text{Percentage}=\frac{\text{Category Count}}{20}\times100
+\]
+
+## Conclusion
+
+50% of respondents answered Yes, 35% answered No, and 15% did not provide an answer. All percentages use the full sample of 20 responses as the denominator, ensuring that missing responses are included in the analysis.",correct,"Same numerical results, different presentation."
+3,"I have 20 survey responses:
+
+Yes, yes, No, YES, No, yes, """", NO, Yes, no, YES, Yes, """", No, yes, No, YES, no, Yes, """"
+
+Calculate the count and percentage of Yes, No, and missing responses. Treat capitalization differences as the same answer and include missing responses in the denominator. Explain your method and show a summary table.",ChatGPT,GPT-6,2026-11-03 13:15,"## Survey Response Analysis
+
+Total responses: 20
+
+I counted the responses by treating capitalization differences as equivalent (e.g., `Yes`, `yes`, and `YES` all count as Yes). Empty strings (`""""`) were classified as missing responses.
+
+## Summary Table
+
+| Response | Count | Percentage |
+|----------|-------|------------|
+| Yes | 10 | 50% |
+| No | 7 | 35% |
+| Missing | 3 | 15% |
+| Total | 20 | 100% |
+
+Response distribution
+
+Yes 50%
+No 35%
+Missing 15%
+
+## Method
+
+1. Normalize capitalization: Convert all nonempty responses to lowercase.
+2. Identify missing values: Classify each empty string (`""""`) as missing.
+3. Count responses: 10 Yes, 7 No, and 3 missing.
+4. Calculate percentages: Divide each count by the total number of responses (20), including missing values.
+
+The formula is:
+
+\[
+\text{Percentage}=\frac{\text{Response count}}{20}\times100
+\]
+
+For example:
+
+\[
+\text{Yes}=\frac{10}{20}\times100=50\%
+\]
+
+## Interpretation
+
+Half of all respondents (50%) answered Yes, 35% answered No, and 15% did not provide an answer.
+
+Important: Because missing responses are included in the denominator, the percentages represent all 20 survey entries rather than only the 17 valid answers.",correct,Same numerical results; explained the denominator.
+4,"I have 20 survey responses:
+
+Yes, yes, No, YES, No, yes, """", NO, Yes, no, YES, Yes, """", No, yes, No, YES, no, Yes, """"
+
+Calculate the count and percentage of Yes, No, and missing responses. Treat capitalization differences as the same answer and include missing responses in the denominator. Explain your method and show a summary table.",Claude,Opus 5.5,2026-11-03 13:15,"**Method**
+
+1. **Normalize case:** Convert every response to lowercase so “Yes”, “yes”, and “YES” all become “yes”, and “No”, “no”, and “NO” all become “no”.
+2. **Identify missing values:** Treat empty strings (“”) as missing.
+3. **Count each category:** Tally yes, no, and missing.
+4. **Calculate percentages:** Divide each count by the total of 20 responses, since missing responses stay in the denominator, then multiply by 100.
+
+**Classification**
+
+| # | Raw | Normalized | # | Raw | Normalized |
+|---|-----|------------|---|-----|------------|
+| 1 | Yes | Yes | 11 | YES | Yes |
+| 2 | yes | Yes | 12 | Yes | Yes |
+| 3 | No | No | 13 | “” | Missing |
+| 4 | YES | Yes | 14 | No | No |
+| 5 | No | No | 15 | yes | Yes |
+| 6 | yes | Yes | 16 | No | No |
+| 7 | “” | Missing | 17 | YES | Yes |
+| 8 | NO | No | 18 | no | No |
+| 9 | Yes | Yes | 19 | Yes | Yes |
+| 10 | no | No | 20 | “” | Missing |
+
+**Summary**
+
+| Response | Count | Calculation | Percentage |
+|----------|-------|-------------|------------|
+| Yes | 10 | 10 ÷ 20 × 100 | **50%** |
+| No | 7 | 7 ÷ 20 × 100 | **35%** |
+| Missing | 3 | 3 ÷ 20 × 100 | **15%** |
+| **Total** | **20** | | **100%** |
+
+Half of respondents answered Yes, about a third answered No, and 15% gave no answer. If you leave out the missing responses and use only the 17 valid answers, Yes is about 58.8% and No is about 41.2%.",correct,Correct results with row-by-row classification.
