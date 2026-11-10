@@ -26,8 +26,14 @@ This project analyzes bicycle and pedestrian traffic on Seattle's Burke-Gilman T
 
 ## Data Limitations
 
-The dataset only represents one location on the Burke-Gilman Trail, so its results may not reflect usage across the entire trail. Additionally, the counter records traffic volume and direction but cannot identify whether individual users are commuting or exercising. Missing observations or sensor errors may also affect the accuracy of the results.
+The main limitation of this dataset is that the counter records how many people pass through the trail and in which direction, but it does not explain why they are traveling. This directly affects my interpretation of the weekday and weekend cycling patterns. For example, weekday traffic peaks around 8 AM and 5 PM, which I interpreted as evidence of possible commuting. However, some cyclists might be exercising before or after work rather than commuting. Similarly, the weekend peak around 1 PM could reflect recreational cycling, but it might also include people traveling to work or running errands.
+
+The directional data presents a similar limitation. More cyclists travel north in the morning and south in the evening, but the counter cannot establish whether these are the same individuals making return trips. Therefore, the patterns suggest that the Burke-Gilman Trail supports both transportation and recreation, but they do not prove the purpose of individual trips. To investigate this further, I would need additional information, such as surveys asking cyclists about their destinations and reasons for using the trail.
 
 ## AI Assistance
 
-ChatGPT was used to assist with Python code for data grouping, visualization, and interpretation. The generated code was executed and its results reviewed in JupyterHub. The notebook includes additional documentation of AI assistance.
+I used ChatGPT to help generate and understand Python code, work with pandas, create visualizations, and organize my analysis. I also used it to help revise written interpretations, particularly the explanations of weekday versus weekend cycling patterns and changes in cycling direction.
+
+I ran the code in JupyterHub and reviewed the resulting tables and graphs. During revision, I expanded my discussion of what the traffic patterns might suggest about people's behavior and clarified the limitations of concluding commuting from counter data alone.
+
+The `A1.ipynb` notebook includes additional documentation of my AI use, including an excerpt of my original prompt, an explanation of how I used the assistance, and a description of the changes made. The documented prompt is an excerpt rather than a complete transcript.
